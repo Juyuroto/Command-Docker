@@ -1,0 +1,19 @@
+services:
+
+  docker-commands-app:
+    image: docker-guide:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: docker-commands-guide
+    ports:
+      - "3005:80"
+    restart: "no"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - docker-app-network
+
+networks:
+  docker-app-network:
+    driver: bridge
