@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { sqlService } from '../services/dockerService';
+import { dockerService } from '../services/dockerService';
 import Navbar from '../components/Navbar';
 import CommandCard from '../components/CommandCard';
 
@@ -7,9 +7,9 @@ function Home() {
   const [activeCategory, setActiveCategory] = useState('Toutes');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const categories = sqlService.getCategories();
+  const categories = dockerService.getCategories();
   
-  let filteredCommands = sqlService.getCommandsByCategory(activeCategory);
+  let filteredCommands = dockerService.getCommandsByCategory(activeCategory);
 
   if (searchTerm.trim() !== '') {
     filteredCommands = filteredCommands.filter(cmd => 

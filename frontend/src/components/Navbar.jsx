@@ -4,7 +4,7 @@ function Navbar({ categories, activeCategory, onSelectCategory, searchTerm, onSe
   return (
     <nav className="navbar">
       <div className="navbar-content">
-        <h1 className="navbar-title">SQL Cheat Sheet and Helper</h1>
+        <h1 className="navbar-title">Docker Cheat Sheet and Helper</h1>
         
         <div className="categories-container">
           {categories.map(cat => (
