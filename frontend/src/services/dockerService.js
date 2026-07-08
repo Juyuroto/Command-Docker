@@ -904,7 +904,7 @@ const dockerCommands = [
   }
 ];
 
-export const sqlService = {
+export const dockerService = {
   getAllCommands: () => {
     return dockerCommands;
   },
